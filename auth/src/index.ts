@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 import {app} from "./app";
 
 const start = async () => {
+    console.log("Starting ...")
     if (!process.env.JWT_SECRET) {
         throw Error("Not found jwt secret key")
     }
