@@ -15,5 +15,6 @@ it('should response with detail current user', async function () {
 it('should expected null with not authenticated', async function () {
     const response = await request(app)
         .get("/api/users/currentuser")
-        .expect(401)
+        .expect(200)
+    expect(response.body.currentUser).toEqual(null)
 });
