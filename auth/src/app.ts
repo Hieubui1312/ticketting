@@ -18,6 +18,8 @@ app.use(
         secure: process.env.NODE_ENV !== "test"
     })
 )
+
+
 app.use(CurrentRouter)
 app.use(SignUpRouter)
 app.use(SignInRouter)
